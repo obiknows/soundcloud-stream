@@ -22,9 +22,10 @@ apikey = "badafaf11df194b276162501eaea8bd1"
 while True:
 	# send a GET request to the soundcloud API and turn it to JSON data
 		data = requests.get( url + apikey ).json()
-		
+
 		# for each song in the batch of data, get the title & artist
 		for obj in data:
+				# if the title isn't in the list, run the loop
 				if obj["title"] not in listofSongs:
 						# add the song title to list of songs
 						listofSongs[obj["title"]] = obj["title"]
@@ -39,14 +40,9 @@ while True:
 						print '{"title":%s,"artist":%s,"genre":%s,"link":%s}'%(title, artist, genre, link)
 						stdout.flush()
 
-						# wait a little to create the image of a stream
+						# wait a little to create the image of a flowing stream
 						time.sleep( r.random() )
-
-		time.sleep( 5 )
-
-        # if the number of bikes have changed, emit a message
-    #    if delta != 0:
-    #        print '{"station":%s,"bikeDelta":%s}'%(m["stationName"], delta)
-    #        stdout.flush()
-        # update the store with the new number of available bikes for that station
-    #    availableBikes[m["stationName"]] = m["availableBikes"]
+						continue
+		
+		# sleep for 8 secs and poll again
+		time.sleep( 8 )
