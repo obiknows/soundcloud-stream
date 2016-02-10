@@ -20,14 +20,16 @@
         var ws = new WebSocket('ws://localhost:8080/')
          ws.onmessage = function(e)
         {
-            var obj = JSON.parse(e.data)
-            obj.strokes.map(function(stroke)
-            {
-                d3.select('#list')
-                    .insert('li', ":first-child")
-                    .text("(" + stroke.lat + ", " +
-                        stroke.lon + ")")
-            })
+						//var obj = JSON.parse(e.data)
+						console.log(e.data)
+            //obj.strokes.map(function(stroke)
+            //{
+            //    d3.select('#list')
+            //        .insert('li', ":first-child")
+            //        .text("(" + stroke.lat + ", " +
+            //            stroke.lon + ")")
+						//})
+						//console.log(obj)
         }
     </script>
 </body>

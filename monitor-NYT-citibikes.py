@@ -30,7 +30,6 @@ while True:
         if delta != 0:
             print '{"station":%s,"bikeDelta":%s}'%(m["stationName"], delta)
             stdout.flush()
-
         # update the store with the new number of available bikes for that station
         availableBikes[m["stationName"]] = m["availableBikes"]
     time.sleep(2)
