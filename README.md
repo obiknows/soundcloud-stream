@@ -1,4 +1,4 @@
-soundcloud streaming :notes:
+:notes: soundcloud streaming :notes: 
 ===========================
 
 
@@ -8,7 +8,7 @@ It is a representaion of the plethora of creativity channeled by people across t
 
 ### Usage
 
-1. something
+1. clone and get up in that folder
 2. `websocketd --port=8080 --staticdir=. python monitor-soundcloud.py`
 3. open a new terminal tab and run: `python -m SimpleHTTPServer`
 4. open Chrome and navigate to: `localhost:8000`
