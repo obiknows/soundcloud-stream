@@ -11,13 +11,13 @@
 
 <body>
     <div class="container">
-        <h2>lightning strikes!</h2>
-        <h3>(lat, lon)</h4>
+        <h2>new music!</h2>
+        <h3>(artist, song, time created, link)</h3>
         <ul id="list">
         </ul>
     </div>
     <script>
-        var ws = new WebSocket("ws://ws3.lightningmaps.org/")
+        var ws = new WebSocket('ws://localhost:8080/')
          ws.onmessage = function(e)
         {
             var obj = JSON.parse(e.data)

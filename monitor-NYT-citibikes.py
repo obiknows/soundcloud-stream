@@ -1,3 +1,10 @@
+#
+# poll_soundlcoud.py
+#
+# by - sam nnodim
+#
+
+# import some libs
 from sys import stdout
 import requests
 import json
